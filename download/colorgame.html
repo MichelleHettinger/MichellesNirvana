@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <body onload="game ()">
+        <p>
+            This is my color game. Have fun!
+        </p>
+        <script>
+var target;
+var random_color;
+var user_guess;
+var num_guesses = 0;
+var finished = false;
+var colorList = ["blue", "cyan", "gold", "green", "magenta", "orange", "red", "white", "yellow"];
+
+function game () {
+    var random_number = Math.random() * 9;
+    var random_number_integer = Math.floor(random_number);
+    target = random_number_integer + 1;
+    
+    if (target == 1)
+        random_color = "blue";
+    else if (target == 2)
+        random_color = "cyan";
+    else if (target == 3)
+        random_color = "gold";    
+    else if (target == 4)
+        random_color = "green";    
+    else if (target == 5)
+        random_color = "magenta";
+    else if (target == 6)
+        random_color = "orange";
+    else if (target == 7)
+        random_color = "red";    
+    else if (target == 8)
+        random_color = "white";
+    else if (target == 9)
+        random_color = "yellow";
+    else alert("Fix your number generator!");
+    
+    alert("Hi there, please play my color game.");
+    
+    while (!finished){
+        user_guess = prompt("I am thinking of one of these colors:\n\n" + colorList + "\n\n Guess a color!");
+        num_guesses += 1;
+        finished = check_guess ();
+    }
+    
+    myBody=document.getElementsByTagName("body")[0];
+    myBody.style.background=random_color;
+}
+
+function check_guess () {
+
+    
+    if ((user_guess != colorList[0]) && (user_guess != colorList[1]) && (user_guess != colorList[2]) && (user_guess != colorList[3]) && (user_guess != colorList[4]) && (user_guess != colorList[5]) && (user_guess != colorList[6]) && (user_guess != colorList[7]) && (user_guess != colorList[8]) && (isNaN(user_guess))) {
+        alert("You didn't guess one of the aforementioned colors!");
+        return false;
+    }
+    if (!isNaN(user_guess)) {
+        alert("You entered a number! Try again.");
+        return false;    
+    }
+    if (user_guess > random_color) {
+        alert("Your color was aphabetically greater than my color (first letter closer to Z).");
+        return false;
+    }
+    if (user_guess < random_color) {
+        alert("Your color was aphabetically less than my color (first letter closer to A).");
+        return false;
+    }
+    if (user_guess == random_color){
+        alert("You got it! The color was " + random_color + ". \n\nIt took you " + num_guesses + " guesse(s) to get the correct color!");
+        return true;
+    }   
+}
+        </script>
+    </body>
+</html>
