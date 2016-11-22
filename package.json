@@ -1,0 +1,33 @@
+{
+  "name": "michellesnirvana",
+  "version": "2.0.0",
+  "description": "A portfolio of michelle hettinger",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelleHettinger/MichellesNirvana.git"
+  },
+  "keywords": [
+    "web",
+    "development",
+    "software",
+    "programming",
+    "chemistry",
+    "music"
+  ],
+  "author": "Michele Hettinger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichelleHettinger/MichellesNirvana/issues"
+  },
+  "homepage": "https://github.com/MichelleHettinger/MichellesNirvana#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.7"
+  }
+}

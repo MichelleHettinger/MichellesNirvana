@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="A portfolio of my best projects!">
+	    <meta name="author" content="Michelle Hettinger">
+		<!-- The above 3 meta tags must come first in the head; any other head content must come after these tags. -->
+		
+		<title>Web Development Projects</title>
+		
+	    <link href="./public/assets/css/reset.css"  rel="stylesheet">   
+	    <link href="./public/assets/css/bootstrap.min.css"   rel="stylesheet">   
+	    <link href="./public/assets/css/bootstrap-theme.min.css" rel="stylesheet">
+	    <link href="./public/assets/css/font-awesome.min.css" rel="stylesheet">
+	    <link href="./public/assets/css/bootstrap-social.css" rel="stylesheet">
+	    <link href="./public/assets/css/mystyles.css" rel="stylesheet">
+
+	    <!-- Portfolio Styles-->
+	    <link href="./public/assets/css/portfolio-item.css" rel="stylesheet">
+	</head>	
+
+	<body>
+	    <!-- Navbar -->
+	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	        <div class="container">
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                <a class="navbar-brand" href="index.html"><img src="assets/img/MNlogo.jpg" height=30 width=41></a>
+	            </div>
+
+	            <!-- Menu Links -->
+	            <div id="navbar" class="navbar-collapse collapse">
+	                <ul class="nav navbar-nav">
+	                    <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+	                    <li> <a href="aboutme.html"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
+	                    <li class="dropdown">
+	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" vrole="button" aria-haspopup="true" aria-expanded="false">
+	                         <span class="glyphicon glyphicon-list-alt"></span> Projects <span class="caret"></span></a>
+	                        <ul class="dropdown-menu">
+	                            <li><a href="software.html">Software</a></li>
+	                            <li><a href="chemistry.html">Chemistry</a></li>
+	                            <li><a href="music.html">Music</a></li>
+	                            <li><a href="writing.html">Writing</a></li>
+	                        </ul>
+	                     </li>
+	                </ul>
+	                 <ul class="nav navbar-nav navbar-right">
+	                    <li><a data-toggle="modal" data-target="#contactModal">
+	                        <span class="fa fa-envelope-o"></span> Contact
+	                        </a>
+	                    </li>
+	                </ul>      
+	            </div>
+	        </div>
+	    </nav> 
+
+	    <!-- contact modal -->
+	    <div id="contactModal" class="modal fade" role="dialog">
+	        <div class="modal-dialog">
+	        <!-- Modal content (header, body, footer) -->
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+	                    <h4 class="modal-title">Contact Me</h4>
+	                </div>
+	                <div class="modal-body">
+	                    <form class="form-horizontal">
+	                        <div class="form-group">
+	                            <div class="col-sm-2">
+	                                <label for="name">Name</label>
+	                            </div>
+	                            <div class="col-sm-10">
+	                                <input type="text" class="form-control input-sm" id="name" placeholder="John Smith">
+	                            </div>
+	                        </div>
+	                        <div class="form-group">
+	                            <div class="col-sm-2">
+	                                <label for="email">Email</label>
+	                            </div>  
+	                            <div class="col-sm-10">    
+	                                <input type="email" class="form-control input-sm" id="email" placeholder="Example@gmail.com">
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <div class="col-sm-2">
+	                                <label>Message</label>
+	                            </div>
+	                            <div class="col-sm-10">
+	                                <textarea class="form-control input-sm" id="message" rows="5"></textarea>
+	                            </div>
+	                        </div>
+
+	                        <div class="form-group">
+	                        <div class="col-sm-4 col-sm-offset-9">
+	                            <button type="submit" class="btn btn-info btn-sm">Submit</button>
+	                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+	                            </div>
+	                        </div>
+	                    </form> 
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+
+	    <!-- Jumbotron -->
+	    <header class="jumbotron">
+	        <!-- Main component for a primary marketing message or call to action -->
+	        <div class="container">
+	            <div class="row row-header">
+	                <div class="col-xs-12 col-sm-8">
+	                    <h1>Michelle's Nirvana</h1>
+	                    <p style="padding:40px;"></p>
+	                    <h2>Some slogan here!</h2>
+	                </div>
+	                <div class="col-xs-12 col-sm-4">
+	                    <p style="padding:20px;"></p>
+	                    <img src="assets/img/MNlogo.jpg" class="img-responsive">
+	                </div>
+	            </div>
+	        </div>
+	    </header>
+
+		<!-- All subpages are rendered here -->
+		<div class="container">
+
+		    {{{ body }}}
+
+
+	        <!-- Footer -->
+	        <footer>
+	            <div class="row">
+	                <div class="col-lg-12">
+	                    <p>Copyright &copy; Your Website 2014</p>
+	                </div>
+	            </div>
+	            <!-- /.row -->
+	        </footer>
+		</div>
+
+
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+	    <script src="./public/assets/js/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="./public/assets/js/bootstrap.min.js"></script>   
+	</body>
+</html>
