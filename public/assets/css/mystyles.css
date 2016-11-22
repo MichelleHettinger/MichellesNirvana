@@ -1,6 +1,8 @@
 .jumbotron {
     padding:50px 30px 50px 30px;
-    margin:0px auto;
+    position: relative;
+    top: -20px;
+
     background: #7986CB ;
     color:floralwhite;
 }
