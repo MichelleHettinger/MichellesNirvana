@@ -21,7 +21,7 @@ app.set('view engine', 'handlebars');
 
 //Serve static content for the app from the "public" directory in the application directory.
 //Public directory becomes /static in html files
-//app.use('/static', express.static(__dirname + '/public'));
+app.use('/static', express.static(__dirname + '/public'));
 
 //app.use(express.static(__dirname + '/public'));
 //Looks in public for static file to server
