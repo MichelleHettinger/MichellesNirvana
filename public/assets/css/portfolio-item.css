@@ -10,6 +10,9 @@ body {
 
 .portfolio-item {
     margin-bottom: 25px;
+
+    height: 220px;
+    width: 400px;
 }
 
 footer {

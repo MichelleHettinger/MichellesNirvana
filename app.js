@@ -63,6 +63,13 @@ app.get('/software4', function(req,res) {
 app.get('/software5', function(req,res) {
   res.render('software5');
 });
+app.get('/software6', function(req,res) {
+  res.render('software6');
+});
+app.get('/software7', function(req,res) {
+  res.render('software7');
+});
+
 
 app.get('/chemistry', function(req,res) {
 	res.render('chemistry');
