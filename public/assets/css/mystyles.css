@@ -1,22 +1,32 @@
 .jumbotron {
     padding:50px 30px 50px 30px;
+    height: 500px;
     position: relative;
     top: -20px;
 
-    background: #7986CB ;
+    background: black no-repeat url("/static/assets/img/background.jpg");
+    background-size: 100% 100%;
     color:floralwhite;
+
+    z-index: 20;
 }
 
-.software-box{
 
-    padding-top: 20px;
-    padding-bottom: 20px;
+#face{
+    height: 108px;
+    position: relative;
+    bottom: 660px;
+    left: 825px;
+    z-index: 999;
 }
-.software-date{
-    padding-top: 20px;
-    padding-left: 50px
-}
+#spacesuit{
+    height: 420px;
 
+    position: relative;
+    bottom: 290px;
+    left: 700px;
+    z-index: 1000;
+}
 
 
 .row-header{
