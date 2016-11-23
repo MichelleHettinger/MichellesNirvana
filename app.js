@@ -48,8 +48,20 @@ app.get('/aboutme', function(req,res) {
 	res.render('aboutme');
 });
 
-app.get('/software', function(req,res) {
-	res.render('software');
+app.get('/software1', function(req,res) {
+	res.render('software1');
+});
+app.get('/software2', function(req,res) {
+  res.render('software2');
+});
+app.get('/software3', function(req,res) {
+  res.render('software3');
+});
+app.get('/software4', function(req,res) {
+  res.render('software4');
+});
+app.get('/software5', function(req,res) {
+  res.render('software5');
 });
 
 app.get('/chemistry', function(req,res) {
