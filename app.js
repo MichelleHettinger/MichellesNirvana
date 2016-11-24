@@ -1,5 +1,4 @@
 var express = require('express');
-var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -36,7 +35,7 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
 //ROUTES HERE
-//Root (www.michellesnirvana.com)
+//Root (www.michellesnirvana.com or michellesnirvana.com)
 app.get('/', function(req,res) {
 	res.render('index');
 });
@@ -61,8 +60,6 @@ app.get('/music', function(req,res) {
 app.get('/writing', function(req,res) {
 	res.render('writing');
 });
-
-
 
 
 ///
