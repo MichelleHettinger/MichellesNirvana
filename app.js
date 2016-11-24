@@ -48,26 +48,8 @@ app.get('/aboutme', function(req,res) {
 	res.render('aboutme');
 });
 
-app.get('/software1', function(req,res) {
-	res.render('software1');
-});
-app.get('/software2', function(req,res) {
-  res.render('software2');
-});
-app.get('/software3', function(req,res) {
-  res.render('software3');
-});
-app.get('/software4', function(req,res) {
-  res.render('software4');
-});
-app.get('/software5', function(req,res) {
-  res.render('software5');
-});
-app.get('/software6', function(req,res) {
-  res.render('software6');
-});
-app.get('/software7', function(req,res) {
-  res.render('software7');
+app.get('/webApps', function(req,res) {
+	res.render('webapps');
 });
 
 

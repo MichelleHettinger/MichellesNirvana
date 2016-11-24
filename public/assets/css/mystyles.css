@@ -4,13 +4,24 @@
     position: relative;
     top: -20px;
 
-    background: black no-repeat url("/static/assets/img/background.jpg");
+    background: no-repeat url("/static/assets/img/background.jpg");
     background-size: 100% 100%;
     color:floralwhite;
 
     z-index: 20;
 }
 
+
+.appThumbnail:hover{
+    cursor: pointer;
+
+    position: relative;
+    right: 20px;
+
+    width: 200%;
+
+
+}
 
 #face{
     height: 108px;
