@@ -45,7 +45,7 @@ app.get('/aboutMe', function(req,res) {
 });
 
 app.get('/webApps', function(req,res) {
-	res.render('webapps');
+	res.render('software');
 });
 
 
