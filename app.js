@@ -35,16 +35,13 @@ app.use(cookieParser());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 
-
-
-
 //ROUTES HERE
 //Root (www.michellesnirvana.com)
 app.get('/', function(req,res) {
 	res.render('index');
 });
 
-app.get('/aboutme', function(req,res) {
+app.get('/aboutMe', function(req,res) {
 	res.render('aboutme');
 });
 
