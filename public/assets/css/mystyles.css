@@ -21,6 +21,15 @@
     width: 200%;
 }
 
+@media screen and (max-width: 1199px){
+    #jumboText p, h1, h2, {
+        text-align:center;
+        margin:0;
+        padding:0;
+
+        
+    }
+}
 
 #face{
     height: 108px;
