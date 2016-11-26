@@ -11,6 +11,18 @@
     z-index: 20;
 }
 
+li a:hover{
+    cursor: pointer;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+hr {
+    padding-top: 20px;
+
+}
 
 .appThumbnail:hover{
     cursor: pointer;
@@ -31,19 +43,30 @@
     }
 }
 
+#jumboPicture{
+    width: 500px;
+    height: 420px;
+
+    position: absolute;
+    top: 30px;
+    right: 20px;
+
+
+    z-index: 10;
+}
 #face{
     height: 108px;
+
     position: relative;
-    bottom: 660px;
-    left: 825px;
-    z-index: 999;
+    bottom: 370px;
+    left: 125px;
+    z-index: 900;
 }
 #spacesuit{
     height: 420px;
 
     position: relative;
-    bottom: 290px;
-    left: 700px;
+
     z-index: 1000;
 }
 
