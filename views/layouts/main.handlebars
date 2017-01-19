@@ -32,7 +32,6 @@
 	                    <span class="icon-bar"></span>
 	                    <span class="icon-bar"></span>
 	                </button>
-	                <a class="navbar-brand" href="https://vimeo.com/82223021"><img src="/static/assets/img/MNIcon.jpg" height=25 width=35></a>
 	            </div>
 
 	            <!-- Menu Links -->
@@ -52,63 +51,15 @@
 	                     </li>
 	                </ul>
 	                 <ul class="nav navbar-nav navbar-right">
-	                    <li><a data-toggle="modal" data-target="#contactModal">
-	                        <span class="fa fa-envelope-o"></span> Contact
-	                        </a>
-	                    </li>
+	                    <li>
+	                    	<a class="navbar-brand" href="https://vimeo.com/82223021">
+	                    		<img src="/static/assets/img/MNIcon.jpg" height=25 width=35>
+	                    	</a>
+											</li>
 	                </ul>      
 	            </div>
 	        </div>
 	    </nav> 
-
-	    <!-- contact modal -->
-	    <div id="contactModal" class="modal fade" role="dialog">
-	        <div class="modal-dialog">
-	        <!-- Modal content (header, body, footer) -->
-	            <div class="modal-content">
-	                <div class="modal-header">
-	                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-	                    <h4 class="modal-title">Contact Me</h4>
-	                </div>
-	                <div class="modal-body">
-	                    <form class="form-horizontal">
-	                        <div class="form-group">
-	                            <div class="col-sm-2">
-	                                <label for="name">Name</label>
-	                            </div>
-	                            <div class="col-sm-10">
-	                                <input type="text" class="form-control input-sm" id="name" placeholder="John Smith">
-	                            </div>
-	                        </div>
-	                        <div class="form-group">
-	                            <div class="col-sm-2">
-	                                <label for="email">Email</label>
-	                            </div>  
-	                            <div class="col-sm-10">    
-	                                <input type="email" class="form-control input-sm" id="email" placeholder="Example@gmail.com">
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group">
-	                            <div class="col-sm-2">
-	                                <label>Message</label>
-	                            </div>
-	                            <div class="col-sm-10">
-	                                <textarea class="form-control input-sm" id="message" rows="5"></textarea>
-	                            </div>
-	                        </div>
-
-	                        <div class="form-group">
-	                        <div class="col-sm-4 col-sm-offset-9">
-	                            <button type="submit" class="btn btn-info btn-sm">Submit</button>
-	                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
-	                            </div>
-	                        </div>
-	                    </form> 
-	                </div>
-	            </div>
-	        </div>
-	    </div>
 
 	    <!-- Jumbotron -->
 	    <header class="jumbotron">
@@ -134,16 +85,15 @@
 
 		    {{{ body }}}
 
-
-	        <!-- Footer -->
-	        <footer>
-	            <div class="row">
-	                <div class="col-lg-12">
-	                    <p style="text-align: center">Copyright &copy; Michelles Nirvana 2016</p>
-	                </div>
-	            </div>
-	            <!-- /.row -->
-	        </footer>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p style="text-align: center">Copyright &copy; Michelles Nirvana 2016</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
 		</div>
 
 
@@ -151,46 +101,40 @@
 	    <script src="./static/assets/js/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <script src="./static/assets/js/bootstrap.min.js"></script> 
-	   <!--  Media query script -->
+	   	<!--  Media query script -->
 	    <script src="./static/assets/js/enquire.min.js"></script>
 
 	    <script type="text/javascript">
 	    	
-			$('.appThumbnail').click(function(){
+				$('.appThumbnail').click(function(){
 
-				var dataApp = $(this).data('app');
-				var dataActive = $(this).data('active');
+					var dataApp = $(this).data('app');
+					var dataActive = $(this).data('active');
 
-				//Loop through the number of apps
-				for (var i=0; i<8; i++){
-					//Make the clicked on app visible
-					//And make the app that was visible invisible
-					if (dataApp == i){
-						$('#myApp' + dataApp).removeClass('sr-only');
-						$('#myApp' + dataActive).addClass('sr-only');
+					//Loop through the number of apps
+					for (var i=0; i<8; i++){
+						//Make the clicked on app visible
+						//And make the app that was visible invisible
+						if (dataApp == i){
+							$('#myApp' + dataApp).removeClass('sr-only');
+							$('#myApp' + dataActive).addClass('sr-only');
+						}
 					}
-				}
 
-				window.scroll(0,580);
-			});
+					window.scroll(0,580);
+				});
 
+				//If screen is less than or equal to 1199px
+				enquire.register("screen and (max-width:1199px)", {
 
+					match : function() {
+						$('#jumboPicture').addClass('sr-only');
+					},
+					unmatch : function() {
+						$('#jumboPicture').removeClass('sr-only');
+					}
+				});
 
-			//If screen is less than or equal to 1199px
-			enquire.register("screen and (max-width:1199px)", {
-
-				match : function() {
-					$('#jumboPicture').addClass('sr-only');
-				},
-				unmatch : function() {
-					$('#jumboPicture').removeClass('sr-only');
-				}
-			});
-
-
-	    </script>
-
-
-
+	  	</script>
 	</body>
 </html>
