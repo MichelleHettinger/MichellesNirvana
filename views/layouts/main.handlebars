@@ -46,7 +46,7 @@
                       <li data-target="#myCarousel">
                          <a href="/webApps">Portfolio</a>
                       </li>
-                      <li>
+                      <li id="contactLi">
                          <a data-target="#myCarousel" data-slide-to="2">Contact</a>
                       </li>
                   </ul>     
@@ -208,13 +208,12 @@
         });
 
         $(".portfolio-item").on('load', function(){
-
-              window.scroll(0,330);
-              
-                  
+            window.scroll(0,330);
         })
 
-
+        $("#contactLi").on('click', function(){
+          window.scroll(0,0);
+        })
 
         //Old stuff for jumbotron
         // //If screen is less than or equal to 1199px
