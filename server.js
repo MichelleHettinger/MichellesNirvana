@@ -36,11 +36,11 @@ app.use(bodyParser.json({type:'application/vnd.api+json'}));
 
 //ROUTES HERE
 //Root (www.michellesnirvana.com or michellesnirvana.com)
-app.get('/', function(req,res) {
+app.get('/home', function(req,res) {
 	res.render('index');
 });
 
-app.get('/aboutMe', function(req,res) {
+app.get('/about', function(req,res) {
 	res.render('aboutme');
 });
 

@@ -1,89 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-	    <meta name="description" content="A portfolio of my best projects!">
-	    <meta name="author" content="Michelle Hettinger">
-		<!-- The above 3 meta tags must come first in the head; any other head content must come after these tags. -->
-		
-		<title>Michelle's Portfolio</title>
-		
-	    <link href="./static/assets/css/bootstrap.min.css"   rel="stylesheet">   
-	    <link href="./static/assets/css/bootstrap-theme.min.css" rel="stylesheet">
-	    <link href="./static/assets/css/font-awesome.min.css" rel="stylesheet">
-	    <link href="./static/assets/css/bootstrap-social.css" rel="stylesheet">
-	    <link href="./static/assets/css/mystyles.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="A portfolio of my best projects!">
+      <meta name="author" content="Michelle Hettinger">
+    <!-- The above 3 meta tags must come first in the head; any other head content must come after these tags. -->
+    
+    <title>Michelle's Portfolio</title>
+    
+      <!-- Bootstrap and Font Awesome-->
+      <link href="./static/assets/css/bootstrap.min.css"   rel="stylesheet">   
+      <link href="./static/assets/css/bootstrap-theme.min.css" rel="stylesheet">
+      <link href="./static/assets/css/font-awesome.min.css" rel="stylesheet">
+      <link href="./static/assets/css/bootstrap-social.css" rel="stylesheet">
 
-	    <!-- Portfolio Styles-->
-	    <link href="./static/assets/css/portfolio-item.css" rel="stylesheet">
-	</head>	
 
-	<body>
-	    <!-- Navbar -->
-	    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	        <div class="container">
-	            <div class="navbar-header">
-	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	                    <span class="sr-only">Toggle navigation</span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                    <span class="icon-bar"></span>
-	                </button>
-	            </div>
+      <!-- Portfolio Styles-->
+      <link href="./static/assets/css/portfolio-item.css" rel="stylesheet">
+      <link href="./static/assets/css/modern-business.css" rel="stylesheet">
 
-	            <!-- Menu Links -->
-	            <div id="navbar" class="navbar-collapse collapse">
-	                <ul class="nav navbar-nav">
-	                    <li> <a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
-	                    <li> <a href="/aboutMe"><span class="glyphicon glyphicon-info-sign"></span>About</a></li>
-	                    <li class="dropdown">
-	                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" vrole="button" aria-haspopup="true" aria-expanded="false">
-	                         <span class="glyphicon glyphicon-list-alt"></span> Projects <span class="caret"></span></a>
-	                        <ul class="dropdown-menu">
-	                            <li><a href="/webApps">Web Apps</a></li>
-	                            <li><a href="/chemistry">Chemistry</a></li>
-	                            <li><a href="/music">Music</a></li>
-	                            <li><a href="/writing">Creative Writing</a></li>
-	                        </ul>
-	                     </li>
-	                </ul>
-	                 <ul class="nav navbar-nav navbar-right">
-	                    <li>
-	                    	<a class="navbar-brand" href="https://vimeo.com/82223021">
-	                    		<img src="/static/assets/img/MNIcon.jpg" height=25 width=35>
-	                    	</a>
-											</li>
-	                </ul>      
-	            </div>
-	        </div>
-	    </nav> 
+      <!-- My Styles-->
+      <link href="./static/assets/css/mystyles.css" rel="stylesheet">
+  </head> 
 
-	    <!-- Jumbotron -->
-	    <header class="jumbotron">
-	        <!-- Main component for a primary marketing message or call to action -->
-	        <div class="container">
-	            <div class="row row-header">
-	                <div class="col-xs-12" id="jumboText" style="margin-left: 90px; height: 300px; color: black">
-	                    <h1 style="color:white">Michelle Hettinger</h1>
-	                    <p style="padding:40px; width: 2px"></p>
-	                    <h2 style="margin-left: 40px; font-weight: bold">Going, Going, Going Beyond <br> Going Utterly Beyond</h2>
-	                    <p style="margin-left: 240px"> -The Heart Suttra</p>
-	                   	<div id="jumboPicture">
-	                    	<img id="spacesuit" src="/static/assets//img/spacesuit.png" class="img-responsive">
-	                    	<img id="face" class="img-circle" src="/static/assets/img/MNlogo.jpg" class="img-responsive">
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </header>
+  <body>
+      <!-- Navbar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                    <a class="navbar-brand" href="/home">M. Hettinger Development</a>
+              </div>
 
-		<!-- All subpages are rendered here -->
-		<div class="container">
+              <!-- Menu Links -->
+              <div id="navbar" class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                      <li data-target="#myCarousel">
+                         <a href="/webApps">Portfolio</a>
+                      </li>
+                      <li>
+                         <a data-target="#myCarousel" data-slide-to="2">Contact</a>
+                      </li>
+                  </ul>     
+              </div>
+          </div>
+      </nav> 
 
-		    {{{ body }}}
+      <!-- Header Carousel -->
+      <header id="myCarousel" class="carousel slide" data-interval="0" style="bottom:19px">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+              <div class="item active">
+                  <div class="fill" style="background-image:url('./static/assets/img/background.png');"></div>
+                  <div class="carousel-caption">
+                    <div class="row">
+                        <div class="col-sm-9">
+                          <h3 style="text-align: left; color:black">A well rounded web and mobile developer with a background in science.</h3>
+                          <p style="text-align: left;font-size:medium;margin-left: 35px;margin-top: 25px;"> Michelle Hettinger is a freelance web and mobile developer with focus on the React.js framework. She is capable of building small scale web and mobile aps from back to front. Michelle is a lifelong learner and committed learning whatever it takes to make your vision come into fruition.</p>
+                        </div>
+                        <div id="MNlogo" class="col-sm-3">
+                          <img src="./static/assets/img/MNlogo.jpg"/>
+                        </div>
+                     </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="fill" style="background-image:url('./static/assets/img/background.png');"></div>
+                  <div class="carousel-caption">
+                      <div class="row">
+                        <h2 
+                          style="text-align: center; color:black; margin-top: 10px;margin-bottom: 20px;">Technologies
+                          </h2>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <ul class="list-group">
+                            <li class="list-group-item active">Front</li>
+                            <li class="list-group-item">React.js, Redux</li>
+                            <li class="list-group-item">HTML, CSS, Bootstrap</li>
+                            <li class="list-group-item">JavaScript, JQuery, AJAX</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-4">
+                          <ul class="list-group">
+                            <li class="list-group-item active">Back</li>
+                            <li class="list-group-item">Node.js, Express, Handlebars</li>
+                            <li class="list-group-item">MySQL</li>
+                            <li class="list-group-item">NoSQL (MongoDB, Firebase)</li>
+                          </ul>
+                        </div>
+                        <div class="col-sm-4">
+                          <ul class="list-group">
+                            <li class="list-group-item active">Mobile</li>
+                            <li class="list-group-item">React-Native</li>
+                            <li class="list-group-item">Exponent</li>
+                            <li class="list-group-item">Firebase</li>
+                          </ul>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="fill" style="background-image:url('./static/assets/img/background.png');"></div>
+                  <div class="carousel-caption">
+
+                    <div class="row">
+                      <!-- Contact Details Column -->
+                      <div class="col-md-6">
+                          <h3 style="color:black">Contact Details</h3>
+                          <p>
+                            Altamonte Springs, FL 32714
+                          </p>
+                          <p><i class="fa fa-phone"></i> 
+                              <abbr title="Phone">P</abbr>: (321) 422-9522</p>
+                          <p><i class="fa fa-envelope-o"></i> 
+                              <abbr title="Email">E</abbr>: 
+                              <a href="mailto:MichelleAHettinger@gmail.com">MichelleAHettinger@gmail.com</a>
+                          </p>
+                          <p><i class="fa fa-clock-o"></i> 
+                            <abbr title="Hours">H</abbr>: Monday - Friday: 10:00 AM to 6:00 PM</p>
+                      </div>
+                      <div class="col-md-6">
+                          <h3 style="color:black">Online Presence</h3>
+                          <div style="margin-left: 70px;">
+                            <p style="text-align:left;margin-bottom: 10px;">
+                              <i class="fa fa-linkedin fa-2x"></i> <a href="https://www.linkedin.com/in/michellehettinger">linkedin.com/in/michellehettinger</a>
+                            </p>
+                            <p style="text-align:left;margin-bottom: 10px;">
+                              <i class="fa fa-github fa-2x"></i> <a href="https://github.com/MichelleHettinger">github.com/MichelleHettinger</a>
+                            </p>
+                            <p style="text-align:left;margin-bottom: 10px;">
+                              <i class="fa fa-stack-overflow fa-2x"></i> <a href="http://stackoverflow.com/users/6506524/michelle-hettinger">stackoverflow.com/michelle-hettinger</a>
+                            </p>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+              <span class="icon-prev"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+              <span class="icon-next"></span>
+          </a>
+      </header>
+
+    <!-- All subpages are rendered here -->
+    <div class="container">
+
+        {{{ body }}}
 
         <!-- Footer -->
         <footer>
@@ -94,47 +177,57 @@
             </div>
             <!-- /.row -->
         </footer>
-		</div>
+    </div>
 
 
-	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
-	    <script src="./static/assets/js/jquery.min.js"></script>
-	    <!-- Include all compiled plugins (below), or include individual files as needed -->
-	    <script src="./static/assets/js/bootstrap.min.js"></script> 
-	   	<!--  Media query script -->
-	    <script src="./static/assets/js/enquire.min.js"></script>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+      <script src="./static/assets/js/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="./static/assets/js/bootstrap.min.js"></script> 
+      <!--  Media query script -->
+      <script src="./static/assets/js/enquire.min.js"></script>
 
-	    <script type="text/javascript">
-	    	
-				$('.appThumbnail').click(function(){
+      <script type="text/javascript">
+        
+        $('.appThumbnail').click(function(){
 
-					var dataApp = $(this).data('app');
-					var dataActive = $(this).data('active');
+          var dataApp = $(this).data('app');
+          var dataActive = $(this).data('active');
 
-					//Loop through the number of apps
-					for (var i=0; i<8; i++){
-						//Make the clicked on app visible
-						//And make the app that was visible invisible
-						if (dataApp == i){
-							$('#myApp' + dataApp).removeClass('sr-only');
-							$('#myApp' + dataActive).addClass('sr-only');
-						}
-					}
+          //Loop through the number of apps
+          for (var i=0; i<8; i++){
+            //Make the clicked on app visible
+            //And make the app that was visible invisible
+            if (dataApp == i){
+              $('#myApp' + dataApp).removeClass('sr-only');
+              $('#myApp' + dataActive).addClass('sr-only');
+            }
+          }
 
-					window.scroll(0,580);
-				});
+          window.scroll(0,330);
+        });
 
-				//If screen is less than or equal to 1199px
-				enquire.register("screen and (max-width:1199px)", {
+        $(".portfolio-item").on('load', function(){
 
-					match : function() {
-						$('#jumboPicture').addClass('sr-only');
-					},
-					unmatch : function() {
-						$('#jumboPicture').removeClass('sr-only');
-					}
-				});
+              window.scroll(0,330);
+              
+                  
+        })
 
-	  	</script>
-	</body>
+
+
+        //Old stuff for jumbotron
+        // //If screen is less than or equal to 1199px
+        // enquire.register("screen and (max-width:1199px)", {
+
+        //  match : function() {
+        //    $('#jumboPicture').addClass('sr-only');
+        //  },
+        //  unmatch : function() {
+        //    $('#jumboPicture').removeClass('sr-only');
+        //  }
+        // });
+
+      </script>
+  </body>
 </html>
