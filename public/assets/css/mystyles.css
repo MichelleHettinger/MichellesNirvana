@@ -1,16 +1,161 @@
-.jumbotron {
-    padding:50px 30px 50px 30px;
-    height: 500px;
-    position: relative;
-    top: -20px;
-
-    background: no-repeat url("/static/assets/img/background.jpg");
-    background-size: 100% 100%;
-    color:floralwhite;
-
-    z-index: 20;
+/*User screen is greater than 1200px*/
+@media only screen and (min-width: 1171px){
+    #myCarousel{
+        height: 50%;
+    }
+    .carouselIntro{
+        margin-top:10px;
+    }
+    .carouselContact{
+        margin-top: 15px;
+    }
+    .carouselSocial{
+        margin-left: 70px;
+    }
+}
+/*Device is less than or equal too*/
+@media screen and (max-width: 1170px){
+    #myCarousel{
+        height: 55%;
+    }
+    .carouselIntro{
+        margin-top: 15px;
+    }
+    .carouselSocial{
+        margin-left: 58px;
+    }
+    .carouselTechnologies{
+        margin-top: 10px;
+    }
+    .carouselContact{
+        margin-top: 30px;
+    }
+}
+ 
+/*Device is less than or equal too*/
+@media screen and (max-width: 1121px){
+    #myCarousel{
+        height: 60%;
+    }
+    .carouselIntro{
+        margin-top: 20px;
+    }
+    .carouselSocial{
+        margin-left: 50px;
+    }
+    .carouselTechnologies{
+        margin-top: 10px;
+    }
+    .carouselContact{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 1113px){
+    .carouselSocial{
+        margin-left: 40px;
+    }
+    .carouselTechnologies{
+        margin-top: 10px;
+    }
+    .carouselContact{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 982px){
+    .carouselIntro{
+        margin-top: 5px;
+    }
+    .carouselSocial{
+        margin-left: 40px;
+    }
+    .carouselContact{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 979px){
+    .carouselSocial{
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width: 979px){
+    .carouselIntro{
+        margin-top: 10px;
+    }
+    .carouselSocial{
+        margin-left: 25px;
+    }
+}
+@media screen and (max-width: 930px){
+    .carouselIntro{
+        margin-top: 20px;
+    }
+    .carouselSocial{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 913px){
+    .carouselSocial{
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 896px){
+    .carouselSocial{
+        margin-left: 5px;
+    }
+}
+@media screen and (max-width: 863px){
+    .carouselSocial{
+        margin-left: 0px;
+    }
+    .carouselTechnologies{
+        margin-top: 0px;
+    }
+}
+@media screen and (max-width: 846px){
+    .carouselSocial{
+        margin-left: 15px;
+    }
+}
+@media screen and (max-width: 796px){
+    #myCarousel{
+        height: 63%;
+    }
+    .carouselIntro{
+        margin-top: 30px;
+    }
+    .carouselTechnologies{
+        margin-top: 0px;
+    }
+    .carouselContact{
+        margin-top: 30px;
+    }
+    .carouselSocial{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width: 767px){
+    #myCarousel{
+        height: 63%;
+    }
+    .carouselIntro{
+        margin-top: 30px;
+    }
+    .carouselTechnologies{
+        margin-top: 15px;
+    }
+    .carouselContact{
+        margin-top: 35px;
+    }
+    .carouselSocial{
+        margin-left: 0px;
+    }
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
 li a:hover{
     cursor: pointer;
 }
@@ -35,24 +180,7 @@ hr {
     width: 200%;
 }
 
-@media screen and (max-width: 1199px){
-    #jumboText p, h1, h2, {
-        text-align:center;
-        margin:0;
-        padding:0;
-    }
-}
 
-#jumboPicture{
-    width: 500px;
-    height: 420px;
-
-    position: absolute;
-    top: 30px;
-    right: 20px;
-
-    z-index: 10;
-}
 #face{
     height: 108px;
 
@@ -61,19 +189,7 @@ hr {
     left: 125px;
     z-index: 900;
 }
-#spacesuit{
-    height: 420px;
 
-    position: relative;
-
-    z-index: 1000;
-}
-
-.socialLinks {
-    width: 350px;
-    margin-top: 0px;
-    margin-left: 30px;
-}
 
 .row-header{
     margin:0px auto;
@@ -167,7 +283,7 @@ body{
     top:100px;
 }
 .carousel {
-    background:#1A237E;
+    background:white;
 }
 .carousel .item {
   height: 300px;

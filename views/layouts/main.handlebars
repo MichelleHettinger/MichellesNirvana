@@ -66,10 +66,10 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
               <div class="item active">
-                  <div class="fill" style="background-image:url('./static/assets/img/background.png');"></div>
-                  <div class="carousel-caption">
+                  <div class="fill" style="border-bottom:1px solid black;background-image:url('./static/assets/img/background.png');"></div>
+                  <div class="carousel-caption carouselIntro">
                     <div class="row">
-                        <div class="col-sm-9">
+                        <div id="introBootDiv" class="col-sm-9">
                           <h3 style="text-align: left; color:black">A well rounded web and mobile developer with a background in science.</h3>
                           <p style="text-align: left;font-size:medium;margin-left: 35px;margin-top: 25px;"> Michelle Hettinger is a freelance web and mobile developer with focus on the React.js framework. She is capable of building small scale web and mobile aps from back to front. Michelle is a lifelong learner and committed learning whatever it takes to make your vision come into fruition.</p>
                         </div>
@@ -80,15 +80,15 @@
                   </div>
               </div>
               <div class="item">
-                  <div class="fill" style="background-image:url('./static/assets/img/background.png');"></div>
-                  <div class="carousel-caption">
+                  <div class="fill" style="border-bottom:1px solid black;background-image:url('./static/assets/img/background.png');"></div>
+                  <div class="carousel-caption carouselTechnologies">
                       <div class="row">
                         <h2 
-                          style="text-align: center; color:black; margin-top: 10px;margin-bottom: 20px;">Technologies
+                          style="text-align: center; color:black; margin-top: 0px;margin-bottom: 20px;">Technologies
                           </h2>
                       </div>
                       <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                           <ul class="list-group">
                             <li class="list-group-item active">Front</li>
                             <li class="list-group-item">React.js, Redux</li>
@@ -96,7 +96,7 @@
                             <li class="list-group-item">JavaScript, JQuery, AJAX</li>
                           </ul>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                           <ul class="list-group">
                             <li class="list-group-item active">Back</li>
                             <li class="list-group-item">Node.js, Express, Handlebars</li>
@@ -104,7 +104,7 @@
                             <li class="list-group-item">NoSQL (MongoDB, Firebase)</li>
                           </ul>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-xs-4">
                           <ul class="list-group">
                             <li class="list-group-item active">Mobile</li>
                             <li class="list-group-item">React-Native</li>
@@ -116,12 +116,12 @@
                   </div>
               </div>
               <div class="item">
-                  <div class="fill" style="background-image:url('./static/assets/img/background.png');"></div>
-                  <div class="carousel-caption">
+                  <div class="fill" style="border-bottom:1px solid black;background-image:url('./static/assets/img/background.png');"></div>
+                  <div class="carousel-caption carouselContact">
 
                     <div class="row">
                       <!-- Contact Details Column -->
-                      <div class="col-md-6">
+                      <div class="col-xs-6">
                           <h3 style="color:black">Contact Details</h3>
                           <p>
                             Altamonte Springs, FL 32714
@@ -135,9 +135,9 @@
                           <p><i class="fa fa-clock-o"></i> 
                             <abbr title="Hours">H</abbr>: Monday - Friday: 10:00 AM to 6:00 PM</p>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-xs-6">
                           <h3 style="color:black">Online Presence</h3>
-                          <div style="margin-left: 70px;">
+                          <div class="carouselSocial">
                             <p style="text-align:left;margin-bottom: 10px;">
                               <i class="fa fa-linkedin fa-2x"></i> <a href="https://www.linkedin.com/in/michellehettinger">linkedin.com/in/michellehettinger</a>
                             </p>
@@ -215,18 +215,44 @@
           window.scroll(0,0);
         })
 
-        //Old stuff for jumbotron
-        // //If screen is less than or equal to 1199px
-        // enquire.register("screen and (max-width:1199px)", {
+        //If screen is less than or equal to 960px
+        enquire.register("screen and (max-width:960px)", {
 
-        //  match : function() {
-        //    $('#jumboPicture').addClass('sr-only');
-        //  },
-        //  unmatch : function() {
-        //    $('#jumboPicture').removeClass('sr-only');
-        //  }
-        // });
+         match : function() {
+           $('#MNlogo').addClass('sr-only');
+           $('#introBootDiv').removeClass('col-sm-9');
+           $('#introBootDiv').addClass('col-sm-12');
+         },
+         unmatch : function() {
+           $('#MNlogo').removeClass('sr-only');
+           $('#introBootDiv').removeClass('col-sm-12');
+           $('#introBootDiv').addClass('col-sm-9');
+         }
+        });
+        enquire.register("screen and (max-width:991px)", {
 
+         match : function() {
+           $('#introBody').removeClass('col-xs-8');
+           $('#socialLinks').addClass('center');
+         },
+         unmatch : function() {
+           $('#introBody').addClass('col-xs-8');
+           $('#socialLinks').removeClass('center');
+         }
+        });
+        enquire.register("screen and (max-width:846px)", {
+
+         match : function() {
+           $('.fa-linkedin').addClass('sr-only');
+           $('.fa-github').addClass('sr-only');
+           $('.fa-stack-overflow').addClass('sr-only');
+         },
+         unmatch : function() {
+           $('.fa-linkedin').removeClass('sr-only');
+           $('.fa-github').removeClass('sr-only');
+           $('.fa-stack-overflow').removeClass('sr-only');
+         }
+        });
       </script>
   </body>
 </html>
