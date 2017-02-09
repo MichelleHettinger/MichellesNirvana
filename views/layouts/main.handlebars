@@ -43,8 +43,11 @@
               <!-- Menu Links -->
               <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
-                      <li data-target="#myCarousel">
+                      <li id="portfolioLi" data-target="#myCarousel">
                          <a href="/webApps">Portfolio</a>
+                      </li>
+                      <li id="technologyLi">
+                         <a data-target="#myCarousel" data-slide-to="1">Technologies</a>
                       </li>
                       <li id="contactLi">
                          <a data-target="#myCarousel" data-slide-to="2">Contact</a>
@@ -196,17 +199,19 @@
             }
           }
 
-          window.scroll(0,330);
+          window.scroll(0,315);
         });
 
         $(".portfolio-item").on('load', function(){
-            window.scroll(0,330);
+            window.scroll(0,315);
         })
 
         $("#contactLi").on('click', function(){
           window.scroll(0,0);
         })
-
+        $("#technologyLi").on('click', function(){
+          window.scroll(0,0);
+        })
         //If screen is less than or equal to 960px
         enquire.register("screen and (max-width:960px)", {
 
