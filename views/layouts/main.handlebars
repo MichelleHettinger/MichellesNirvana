@@ -55,7 +55,7 @@
       </nav> 
 
       <!-- Header Carousel -->
-      <header id="myCarousel" class="carousel slide" data-interval="0" style="bottom:19px">
+      <header id="myCarousel" class="carousel slide" data-interval="0" style="bottom:19px; height:280px;">
           <!-- Indicators -->
           <ol class="carousel-indicators">
               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -66,25 +66,26 @@
           <!-- Wrapper for slides -->
           <div class="carousel-inner">
               <div class="item active">
-                  <div class="fill" style="border-bottom:1px solid black;background-image:url('./static/assets/img/background.png');"></div>
-                  <div class="carousel-caption carouselIntro">
-                    <div class="row">
-                        <div id="introBootDiv" class="col-sm-9">
-                          <h3 style="text-align: left; color:black">A well rounded web and mobile developer with a background in science.</h3>
-                          <p style="text-align: left;font-size:medium;margin-left: 35px;margin-top: 25px;"> Michelle Hettinger is a freelance web and mobile developer with focus on the React.js framework. She is capable of building small scale web and mobile aps from back to front. Michelle is a lifelong learner and committed learning whatever it takes to make your vision come into fruition.</p>
-                        </div>
-                        <div id="MNlogo" class="col-sm-3">
-                          <img src="./static/assets/img/MNlogo.jpg"/>
-                        </div>
-                     </div>
+                <div class="fill" style="border-bottom:1px solid black;background-image:url('./static/assets/img/background.png');"></div>
+
+                <div class="carousel-caption carouselIntro">
+                    <h2 style="text-align:center;color:black;margin-top:0">M. Hettinger Web Development</h2>
+                  <div class="center-block" style="margin:0 0 0 12%">
+                      <img src="./static/assets/img/MNlogo.jpg" 
+                        class="img-responsive"
+                        style="max-height:120px;margin:0% 20% 0% 2%" 
+                        align="right" 
+                      />
+                      <p style="text-align:justify;font-size:medium;margin:0 0 0 5%">Michelle Hettinger is a freelance web and mobile developer with focus on the React.js framework. She is capable of building small scale web and mobile aps from back to front. Michelle is a lifelong learner and committed learning whatever it takes to make your vision come into fruition.</p>
                   </div>
+                </div>
+
               </div>
               <div class="item">
                   <div class="fill" style="border-bottom:1px solid black;background-image:url('./static/assets/img/background.png');"></div>
                   <div class="carousel-caption carouselTechnologies">
                       <div class="row">
-                        <h2 
-                          style="text-align: center; color:black; margin-top: 0px;margin-bottom: 20px;">Technologies
+                        <h2 style="text-align: center; color:black; margin-top: 0px;margin-bottom: 20px;">Technologies
                           </h2>
                       </div>
                       <div class="row">
@@ -168,15 +169,6 @@
 
         {{{ body }}}
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p style="text-align: center">Copyright &copy; Michelles Nirvana 2016</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
     </div>
 
 
@@ -227,17 +219,6 @@
            $('#MNlogo').removeClass('sr-only');
            $('#introBootDiv').removeClass('col-sm-12');
            $('#introBootDiv').addClass('col-sm-9');
-         }
-        });
-        enquire.register("screen and (max-width:991px)", {
-
-         match : function() {
-           $('#introBody').removeClass('col-xs-8');
-           $('#socialLinks').addClass('center');
-         },
-         unmatch : function() {
-           $('#introBody').addClass('col-xs-8');
-           $('#socialLinks').removeClass('center');
          }
         });
         enquire.register("screen and (max-width:846px)", {
